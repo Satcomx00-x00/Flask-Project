@@ -1,0 +1,26 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='logomini.png') }}">
+    <title>Chronopost</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"  media="screen"/>
+</head>
+<!-- <img src="{{ url_for('static', filename='fond_accueil_decal.jpg') }}"> -->
+<body id=body_acc>
+    <div id=entete>
+    <div id=corps>
+        Chronopost est une société spécialisée dans la livraison express de colis aux entreprises et aux particuliers. Membre de DPDgroup, réseau international de livraison de colis, n°2 en Europe, l’entreprise emploie plus de 3 800 collaborateurs et a distribué 170 millions de colis en 20182. L’entreprise est présente sur les marchés Business to business, Business to Consumer et Consumer to Consumer. Chronopost offre une couverture de toute la France métropolitaine pour les collectes et les livraisons en s’appuyant un réseau constitué de plus de 100 sites opérationnels et 19 500 points de proximité. A l’international, Chronopost livre les colis dans 230 pays grâce au réseau de ses partenaires
+      <div  >
+        <br><br>
+        &emsp;&ensp;&ensp;&ensp;&ensp;Vous êtes ?
+        <br><tr><th rowspan="1"><a href="{{ url_for('register') }}" class="button"> S'enregistrer</a> </th><th colspan="1"><a href="{{ url_for('login') }}" class="button"> Client</a></th></tr>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+{% endblock content %}

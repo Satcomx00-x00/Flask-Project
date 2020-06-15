@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+     <body id=body_acc>
+         <div id=entete>
+         <div id=corps>
+      <h3>
+            SQLAlchemy example</a>
+      </h3>
+
+      <hr/>
+         </a></h3>
+
+      <table>
+         <thead>
+            <tr>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for customers in customers %}
+               <tr>
+                  <td>{{ customers.firstname }}</td>
+                  <td>{{ customers.lastname }}</td>
+                  <td>{{ customers.address1 }}</td>
+                  <td>{{ customers.address2 }}</td>
+                  <td>{{ customers.city }}</td>
+                  <td>{{ customers.state }}</td>
+                  <td>{{ customers.zip }}</td>
+                  <td>{{ customers.country }}</td>
+                  <td>{{ customers.region }}</td>
+                  <td>{{ customers.email }}</td>
+                  <td>{{ customers.phone }}</td>
+                  <td>{{ customers.creditcardtype }}</td>
+                  <td>{{ customers.creditcard }}</td>
+                  <td>{{ customers.creditcardexpiration }}</td>
+                  <td>{{ customers.username }}</td>
+                  <td>{{ customers.password }}</td>
+                  <td>{{ customers.age }}</td>
+                  <td>{{ customers.income }}</td>
+                  <td>{{ customers.gender }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   </body>
+</html>

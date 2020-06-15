@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='logomini.png') }}">
+    <title>Chronopost: employé</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="page-header">
+        <nav>
+            <a href="{{ url_for('acceuil') }}">
+                <img class="logo" src="{{ url_for('static', filename='logo1 W.png') }}" width=200em alt="logo Chronopost">
+            </a>
+            <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu"></button>
+            <ul class="admin-menu">
+                <li class="menu-heading">
+                    <h3>PLD</h3>
+                </li>
+                <li>
+                    <div>Pages</div>
+                </li>
+                <li>
+                    <a href="{{ url_for('pld') }}">  Colis envoyés</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('pld') }}">  Colis reçus</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('pld') }}">  Suivi colis</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('creationcolis') }}">  création colis</a>
+                </li>
+                <li>
+                    <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+                        <span>Compresser</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-content">
+        <section class="grid">
+            <article><div id=Textbvn>Bienvenue dans la PLD!</div></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+    </section>
+<script>
+    const body = document.body;
+    const collapseBtn = document.querySelector(".admin-menu button");
+    const collapsedClass = "collapsed";
+
+    collapseBtn.addEventListener("click", function() {
+      this.getAttribute("aria-expanded") == "true"
+        ? this.setAttribute("aria-expanded", "false")
+        : this.setAttribute("aria-expanded", "true");
+      this.getAttribute("aria-label") == "collapse menu"
+        ? this.setAttribute("aria-label", "expand menu")
+        : this.setAttribute("aria-label", "collapse menu");
+      body.classList.toggle(collapsedClass);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ user_image }}">
+    <title>Création de colis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body id=body_acc>
+    <ul id=centrage>
+        <label for="name">adresse expéditeur:</label>
+        <li>
+            <input type="text" id="name" name="adresse expéditeur" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">département expéditeur:</label>
+        <li>
+            <input type="text" id="name" name="département expéditeur" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">Nom expéditeur:</label>
+        <li>
+            <input type="text" id="name" name="Nom expéditeur" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">adresse destination:</label>
+        <li>
+            <input type="text" id="name" name="adresse destination" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">département destination:</label>
+        <li>
+            <input type="text" id="name" name="département destination" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">Nom destinataire:</label>
+        <li>
+            <input type="text" id="name" name="Nom destinataire" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">poids colis (en gramme):</label>
+        <li>
+            <input type="text" id="name" name="poids colis" required minlength="4" maxlength="100" size="50">
+        </li>
+        <label for="name">dimentions:</label>
+        <li>
+            <input type="text" id="name" name="dimentions" required minlength="4" maxlength="100" size="50">
+        </li>
+        <li>
+            <a href="{{ url_for('pld') }}">Confirmer</a>
+        </li>
+    </ul>
+</body>
+</html>
+{% endblock %}
