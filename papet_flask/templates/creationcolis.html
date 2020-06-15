@@ -10,44 +10,29 @@
     <title>Création de colis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+    ID_COLIS = request.form['ID_COLIS']
+    ID_CLIENT = request.form['ID_CLIENT']
+    ID_ENTREPRISE = request.form['ID_ENTREPRISE']
+    POID_COLIS = request.form['POID_COLIS']
 <body id=body_acc>
-
     <ul id=centrage>
-        <label for="name">adresse expéditeur:</label>
-        <li>
-            <input type="text" id="name" name="adresse expéditeur" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">département expéditeur:</label>
-        <li>
-            <input type="text" id="name" name="département expéditeur" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">Nom expéditeur:</label>
-        <li>
-            <input type="text" id="name" name="Nom expéditeur" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">adresse destination:</label>
-        <li>
-            <input type="text" id="name" name="adresse destination" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">département destination:</label>
-        <li>
-            <input type="text" id="name" name="département destination" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">Nom destinataire:</label>
-        <li>
-            <input type="text" id="name" name="Nom destinataire" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">poids colis (en gramme):</label>
-        <li>
-            <input type="text" id="name" name="poids colis" required minlength="4" maxlength="100" size="50">
-        </li>
-        <label for="name">dimentions:</label>
-        <li>
-            <input type="text" id="name" name="dimentions" required minlength="4" maxlength="100" size="50">
-        </li>
-        <li>
-            <a href="PLD.html" onclick="alertbox()">Confirmer</a>
-        </li>
+      <form method="POST">
+        <div class="form-group">
+          <label for="email">ID ENTREPRISE : </label>
+          <input type="text" name="ID_ENTREPRISE" class="form-control" id="ID_ENTREPRISE">
+        </div>
+        <div class="form-group">
+          <label for="email">ID CLIENT : </label>
+          <input type="text" name="ID_CLIENT" class="form-control" id="ID_CLIENT">
+        </div>
+        <div class="form-group">
+          <label for="email"> POID COLIS: </label>
+          <input type="text" name="POID_COLIS" class="form-control" id="POID_COLIS">
+        </div>
+        <div >
+          <button type="submit" class="button">s'enregistrer</button>
+        </div>
+    </form>
         <script>
         funtion alertbox(){
           alert("Données du colis enregistrées.")
